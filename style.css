@@ -1,0 +1,121 @@
+:root{
+
+    --clr-primary-soft-blue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+
+    --dark-blue-main-bg: hsl(217, 54%, 11%);
+    --dark-blue-card-bg: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background: var(--dark-blue-main-bg);
+    display: grid;
+    place-items: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: .5rem;
+    transition: all ease-in-out 300ms;   
+}
+.card{
+    width: 85%;
+    max-width: 320px;    
+    background: var(--dark-blue-card-bg);
+    border-radius: 1rem;
+    margin: 4rem auto;
+    padding: 1.5rem;
+}
+.img{
+    position: relative;
+    border-radius: 1rem;
+    background: var(--clr-primary-cyan); 
+}
+.hover__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all ease-in-out 300ms;
+}
+
+.img:hover img{
+    opacity: .7;
+}
+.img:hover .hover__icon{
+    opacity: 1;
+}
+.card__title{
+    color: var(--white);
+    font-size: 1.375rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: .875rem;
+}
+.card__title:hover{
+    color: var(--clr-primary-cyan);
+}
+.card__text{
+    color: var(--clr-primary-soft-blue);
+    font-size: .975rem;
+    line-height: 1.7;
+    margin-block-end: 0;
+}
+.card__info,
+.card__avatar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__info div{
+    display: flex;
+    align-items: center;
+}
+svg{
+    margin-inline-end: .3rem;
+}
+.info__value{
+    color: var(--clr-primary-cyan);
+    font-size: .9rem;
+}
+.info__days-left{
+    color: var(--clr-primary-soft-blue);
+    font-size: .9rem;
+}
+.card__avatar{
+    padding-block-start: 1rem;
+    border-top: 1px solid var(--dark-blue-line);
+    justify-content: flex-start;
+}
+.card__avatar img{
+    width: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+.card__avatar .avatar__name{
+    color: var(--clr-primary-soft-blue);
+    font-size: .950rem;
+    padding-inline-start: 1rem;
+    margin-block: 0;
+}
+.avatar__name span{
+    color: var(--white);
+}
+.avatar__name span:hover{
+    color: var(--clr-primary-cyan);
+}
